@@ -1,10 +1,24 @@
-import React from 'react';
+import { Home, Skill, Project, Contact } from './sections';
+import { Header, Footer } from './components';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Emre's Portfolio</h1>
-    </div>
+    <>
+      <Header />
+      <section id="home">
+        <Home />
+      </section>
+      <section id="skill">
+        <Skill />
+      </section>
+      <section id="project">
+        <Project />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+      <Footer />
+    </>
   );
 }
 
