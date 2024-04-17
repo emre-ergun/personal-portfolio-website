@@ -2,7 +2,7 @@ import React from 'react'
 
 const Project = () => {
   return (
-    <div>Project</div>
+    <section id='project' className='max-container'>Project</section>
   )
 }
 

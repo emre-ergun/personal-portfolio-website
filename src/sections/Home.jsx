@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <section
+      id="home"
+      className="flex justify-center items-center min-h-screen max-container"
+    >
+      Home
+    </section>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,24 +1,16 @@
-import { Home, Skill, Project, Contact } from './sections';
-import { Header, Footer } from './components';
+import { Home, Skill, Project, Contact, Footer } from './sections';
+import { NavBar } from './components';
 
 function App() {
   return (
-    <>
-      <Header />
-      <section id="home">
-        <Home />
-      </section>
-      <section id="skill">
-        <Skill />
-      </section>
-      <section id="project">
-        <Project />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+    <main className="relative">
+      <NavBar />
+      <Home />
+      <Skill />
+      <Project />
+      <Contact />
       <Footer />
-    </>
+    </main>
   );
 }
 
