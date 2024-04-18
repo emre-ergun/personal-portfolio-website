@@ -38,10 +38,12 @@ jobs:
         with:
           name: dist
           path: dist
+
       - name: Sync Files to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          server: ${{secrets.FTP_PORTFOLIO_SERVER}}
-          username: ${{secrets.FTP_PORTFOLIO_USERNAME}}
-          password: ${{secrets.FTP_PORTFOLIO_PASSWORD}}
-          local-dir: ./dist/
+          host: ${{ secrets.FTP_PORTFOLIO_SERVER }}
+          user: ${{ secrets.FTP_PORTFOLIO_USERNAME }}
+          password: ${{ secrets.FTP_PORTFOLIO_PASSWORD }}
+          localDir: "dist"
+
