@@ -39,4 +39,4 @@ jobs:
             server: ${{secrets.FTP_PORTFOLIO_SERVER}}
             username: ${{secrets.FTP_PORTFOLIO_USERNAME}}
             password: ${{secrets.FTP_PORTFOLIO_PASSWORD}}
-            local-dir: ./src/
+            local-dir: src/
