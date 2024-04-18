@@ -26,24 +26,23 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
-          name: production-files
-          path: ./dist
+          name: dist
+          path: dist
   deploy:
-    name: FTP-Deploy
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: production-files
-          path: ./product
-      - name: FTP-Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+          name: dist
+          path: dist
+      - name: Sync files to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{secrets.FTP_PORTFOLIO_SERVER}}
           username: ${{secrets.FTP_PORTFOLIO_USERNAME}}
           password: ${{secrets.FTP_PORTFOLIO_PASSWORD}}
-          local-dir: ./product/
-      - name: Delete downloaded dist folder
-        run: rm -rvf ./product
