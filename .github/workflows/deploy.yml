@@ -33,10 +33,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+        - name: Checkout project
+          uses: actions/checkout@v3
         - name: FTP-Deploy
           uses: SamKirkland/FTP-Deploy-Action@v4.3.4
           with:
             server: ${{secrets.FTP_PORTFOLIO_SERVER}}
             username: ${{secrets.FTP_PORTFOLIO_USERNAME}}
             password: ${{secrets.FTP_PORTFOLIO_PASSWORD}}
-            local-dir: src/
+            local-dir: ./src/
