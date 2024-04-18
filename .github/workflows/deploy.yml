@@ -33,16 +33,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/download-artifact@v4
-          with:
-            name: Downloading Artifacts
-            path: ./dist/
         - name: FTP-Deploy
           uses: SamKirkland/FTP-Deploy-Action@v4.3.4
           with:
             server: ${{secrets.FTP_PORTFOLIO_SERVER}}
             username: ${{secrets.FTP_PORTFOLIO_USERNAME}}
             password: ${{secrets.FTP_PORTFOLIO_PASSWORD}}
-            local-dir: ./dist/
-        - name: Delete downloaded artifacts
-          run: rm -rvf ./dist
+            local-dir: ./src/
