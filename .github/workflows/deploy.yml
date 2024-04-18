@@ -33,12 +33,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
+      - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
-      - name: Sync files to cPanel
+      - name: Sync Files to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{secrets.FTP_PORTFOLIO_SERVER}}
