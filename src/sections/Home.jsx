@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex justify-center items-center min-h-screen max-container dark:text-white"
+      className="flex justify-center items-center min-h-screen max-container"
     >
       Home
     </section>
