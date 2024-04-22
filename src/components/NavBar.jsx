@@ -10,7 +10,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" className="w-8 h-8" />
           </a>
         </div>
-        <div>
+        <div className="hidden md:block">
           <ul className="flex justify-center items-center gap-4">
             <li>
               <a href="#skill">Skills</a>
@@ -21,6 +21,13 @@ const NavBar = () => {
             <li>
               <a href="#contact">Contact Me</a>
             </li>
+          </ul>
+        </div>
+        <div className="md:hidden cursor-pointer">
+          <ul className="flex-row justify-center items-center">
+            <li className="border border-black w-5 mb-1.5"></li>
+            <li className="border border-black w-5 mb-1.5"></li>
+            <li className="border border-black w-5 mb-1.5"></li>
           </ul>
         </div>
       </nav>

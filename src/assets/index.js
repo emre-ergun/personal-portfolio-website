@@ -1,4 +1,4 @@
-import logo from './minilogo.png';
+import logo from './logo.svg';
 
 export {
     logo
