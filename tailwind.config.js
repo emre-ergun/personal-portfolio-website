@@ -20,7 +20,17 @@ export default {
     },
     extend: {
       colors: {
-        'button-primary': "#000",
+        'button-primary': '#000',
+      },
+      keyframes: {
+        'open-menu': {
+          '0%': { transform: 'scaleY(0)' },
+          '70%': { transform: 'scaleY(1.1)' },
+          '100%': { transform: 'scaleY(1)' },
+        },
+      },
+      animation: {
+        'open-menu': 'open-menu 0.5s ease-in-out forwards',
       },
     },
   },

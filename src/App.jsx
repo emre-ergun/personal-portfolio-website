@@ -1,5 +1,4 @@
-import { Home, Skill, Project, Contact, Footer } from './sections';
-import { NavBar } from './components';
+import { Home, Skill, Project, Contact, Footer, NavBar } from './sections';
 
 document.body.style.backgroundColor = 'black';
 

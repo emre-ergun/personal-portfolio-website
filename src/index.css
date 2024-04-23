@@ -22,27 +22,26 @@
   }
 }
 
-
-.button-one .line {
-  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
-  transform-origin: center;
-}
-.button-one:hover .line {
-  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+.hamburger-button {
+  --button-color: black;
+  overflow: hidden;
 }
 
-.button-one:hover :is(.top, .bottom) {
-  y: 4.5;
+.hamburger-button .hamburger-svg {
+  transition: translate 1s, rotate 1s;
 }
 
-.button-one:hover .top {
-  rotate: 45deg;
+.hamburger-button:hover .hamburger-svg {
+  translate: 3px -2px;
+  rotate: 0.125turn;
 }
 
-.button-one:hover .bottom {
-  rotate: -45deg;
+.hamburger-button .hamburger-line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 300;
 }
 
-.button-one:hover .middle {
-  opacity: 0;
+.hamburger-button:hover .hamburger-line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
 }
