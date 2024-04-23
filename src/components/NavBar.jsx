@@ -24,8 +24,8 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="md:hidden cursor-pointer" onClick={() => console.log('hello')}>
-          <HamburgerMenu style="" onClickHandle={() => {}} />
+        <div className="md:hidden cursor-pointer">
+          <HamburgerMenu />
         </div>
       </nav>
     </header>

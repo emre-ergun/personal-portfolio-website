@@ -1,7 +1,7 @@
 import { Home, Skill, Project, Contact, Footer } from './sections';
 import { NavBar } from './components';
 
-document.querySelector('html').style.backgroundColor = 'black';
+document.body.style.backgroundColor = 'black';
 
 function App() {
   return (

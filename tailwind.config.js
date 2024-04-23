@@ -18,7 +18,11 @@ export default {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      colors: {
+        'button-primary': "#000",
+      },
+    },
   },
   plugins: [],
 };
