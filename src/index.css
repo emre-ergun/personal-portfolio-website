@@ -3,15 +3,21 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 @layer components {
   .max-container {
     max-width: 1280px;
     margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 64px);
   }
 }

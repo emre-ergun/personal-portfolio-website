@@ -1,4 +1,5 @@
-const HamburgerMenu = ({style}) => {
+const HamburgerMenu = ({ style, onClickHandle }) => {
+  onClickHandle();
   return (
     <div className={style}>
       <ul className="flex-row justify-center items-center">

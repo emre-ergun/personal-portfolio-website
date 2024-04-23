@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { logo } from '../assets';
 import HamburgerMenu from './HamburgerMenu';
 
 const NavBar = () => {
   return (
-    <header className="m-2 p-2 sticky top-2">
-      <nav className=" flex justify-between items-center max-container">
+    <header className="sticky top-0 z-10 bg-white opacity-85">
+      <nav className=" flex justify-between items-center max-container mx-4">
         <div>
           <a href="#home">
             <img src={logo} alt="logo" className="w-16 h-16" />
@@ -24,8 +24,8 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className='md:hidden'>
-          <HamburgerMenu style="" />
+        <div className="md:hidden cursor-pointer" onClick={() => console.log('hello')}>
+          <HamburgerMenu style="" onClickHandle={() => {}} />
         </div>
       </nav>
     </header>
