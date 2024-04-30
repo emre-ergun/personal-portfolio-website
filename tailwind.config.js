@@ -1,3 +1,5 @@
+import { transformWithEsbuild } from 'vite';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -28,9 +30,14 @@ export default {
           '70%': { transform: 'scaleY(1.1)' },
           '100%': { transform: 'scaleY(1)' },
         },
+        'move-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(2px)' },
+        },
       },
       animation: {
         'open-menu': 'open-menu 0.5s ease-in-out forwards',
+        'move-right': 'move-right 0.1s ease-in-out forwards',
       },
     },
   },

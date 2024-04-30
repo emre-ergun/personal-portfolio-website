@@ -10,9 +10,9 @@ const NavBar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-white">
+    <header className="sticky top-0 z-10 bg-white border-b border-slate-500 shadow-lg">
       <nav className="flex justify-between items-center max-container px-4">
-        <div>
+        <div className="hover:animate-move-right">
           <a href="#home">
             <img src={logo} alt="logo" className="w-16 h-16" />
           </a>
@@ -34,7 +34,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
-          <HamburgerMenu/>
+          <HamburgerMenu />
         </div>
       </nav>
       {isClicked && (
