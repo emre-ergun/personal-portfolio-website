@@ -42,17 +42,17 @@ const NavBar = () => {
           className="absolute bg-white w-full h-screen origin-top animate-open-menu md:hidden"
           onClick={toggleMenu}
         >
-          <ul className="flex flex-col justify-center items-end mt-4 pr-4 space-y-4 text-2xl">
-            <li>
+          <ul className="flex flex-col justify-center items-end mt-4 px-4 space-y-4 text-2xl">
+            <li className='w-full text-center border-b-2 border-slate-500 hover:text-slate-600'>
               <a href="#home">Home</a>
             </li>
-            <li>
+            <li className='w-full text-center border-b-2 border-slate-500 hover:text-slate-600'>
               <a href="#skill">Skills</a>
             </li>
-            <li>
+            <li className='w-full text-center border-b-2 border-slate-500 hover:text-slate-600'>
               <a href="#project">Projects</a>
             </li>
-            <li>
+            <li className='w-full text-center border-b-2 border-slate-500 hover:text-slate-600'>
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
