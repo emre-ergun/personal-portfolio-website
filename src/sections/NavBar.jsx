@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-white border-b border-slate-500 shadow-lg">
+    <header className="sticky top-0 z-10 bg-white shadow-lg">
       <nav className="flex justify-between items-center max-container px-4">
         <div className="hover:animate-move-right">
           <a href="#home">

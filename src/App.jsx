@@ -1,7 +1,5 @@
 import { Home, Skill, Project, Contact, Footer, NavBar } from './sections';
 
-document.body.style.backgroundColor = 'black';
-
 function App() {
   return (
     <main className="relative">
