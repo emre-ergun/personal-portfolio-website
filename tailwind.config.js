@@ -21,14 +21,18 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      fontFamily: {
+        primary: ['Montserrat'],
+        secondary: ['Inter'],
+      },
       colors: {
         'button-primary': '#000',
       },
       keyframes: {
         'open-menu': {
-          '0%': { transform: 'scaleY(0)' },
-          '70%': { transform: 'scaleY(1.1)' },
-          '100%': { transform: 'scaleY(1)' },
+          '0%': { transform: 'scaleX(0)' },
+          '70%': { transform: 'scaleX(1.1)' },
+          '100%': { transform: 'scaleX(1)' },
         },
         'move-right': {
           '0%': { transform: 'translateX(0)' },
