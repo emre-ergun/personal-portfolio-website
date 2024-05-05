@@ -39,23 +39,26 @@ const NavBar = () => {
       </nav>
       {isClicked && (
         <div
-          className="absolute bg-white right-0 w-full h-screen origin-right animate-open-menu md:hidden"
+          className="absolute bg-white pt-16 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
           onClick={toggleMenu}
         >
-          <ul className="flex flex-col justify-center items-center mt-4 px-4 space-y-4 text-xl font-primary font-semibold">
-            <li className='w-full text-center border-b border-slate-500 hover:text-slate-600'>
+          <ul className="flex flex-col justify-center items-center mt-4 px-8 space-y-4 text-xl font-primary font-semibold">
+            <li className="w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
               <a href="#home">Home</a>
             </li>
-            <li className='w-full text-center border-b border-slate-500 hover:text-slate-600'>
+            <li className="w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
               <a href="#skill">Skills</a>
             </li>
-            <li className='w-full text-center border-b border-slate-500 hover:text-slate-600'>
+            <li className="w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
               <a href="#project">Projects</a>
             </li>
-            <li className='w-full text-center border-b border-slate-500 hover:text-slate-600'>
+            <li className="w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
+          <p className="my-16 text-sm text-center text-slate-500">
+            Copyright &copy; {new Date().getFullYear()} EngramSoft
+          </p>
         </div>
       )}
     </header>

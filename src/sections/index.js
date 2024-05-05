@@ -5,4 +5,4 @@ import Contact from './Contact';
 import Footer from './Footer';
 import NavBar from './NavBar';
 
-export { Home, Skill, Project, Contact, Footer, NavBar};
+export { Home, Skill, Project, Contact, Footer, NavBar };
