@@ -34,14 +34,9 @@ export default {
           '70%': { transform: 'scaleX(1.1)' },
           '100%': { transform: 'scaleX(1)' },
         },
-        'move-right': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(2px)' },
-        },
       },
       animation: {
         'open-menu': 'open-menu 0.5s ease-in-out forwards',
-        'move-right': 'move-right 0.1s ease-in-out forwards',
       },
     },
   },

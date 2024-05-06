@@ -29,21 +29,23 @@
   overflow: hidden;
 }
 
-.hamburger-button .hamburger-svg {
-  transition: translate 1s, rotate 1s;
+.hamburger-svg-open {
+  transition: 1s;
 }
 
-.hamburger-button:active .hamburger-svg {
+.hamburger-svg-close {
+  transition: 1s;
   translate: 3px -2px;
   rotate: 0.125turn;
 }
 
-.hamburger-button .hamburger-line {
+.hamburger-line-open {
   transition: 1s;
   stroke-dasharray: 60 31 60 300;
 }
 
-.hamburger-button:active .hamburger-line {
+.hamburger-line-close {
+  transition: 1s;
   stroke-dasharray: 60 105 60 300;
   stroke-dashoffset: -90;
 }

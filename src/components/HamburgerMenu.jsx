@@ -1,4 +1,4 @@
-const HamburgerMenu = () => {
+const HamburgerMenu = ({isClicked}) => {
   return (
     <button
       className="hamburger-button border-2 border-button-primary rounded-lg mt-2"
@@ -8,10 +8,10 @@ const HamburgerMenu = () => {
       <svg
         viewBox="-10 -10 120 120"
         width="45"
-        className="fill-none hamburger-svg stroke-button-primary"
+        className={`fill-none stroke-button-primary ${isClicked ? 'hamburger-svg-close' : 'hamburger-svg-open'}`}
       >
         <path
-          className="hamburger-line"
+          className={`${isClicked ? 'hamburger-line-close' : 'hamburger-line-open'}`}
           strokeLinejoin="round"
           strokeLinecap="round"
           strokeWidth="10"
