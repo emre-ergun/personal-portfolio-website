@@ -43,16 +43,16 @@ const NavBar = () => {
           onClick={toggleMenu}
         >
           <ul className="flex flex-col justify-center items-center mt-4 px-8 space-y-4 text-xl font-primary font-semibold">
-            <li className="p-2 w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
+            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
               <a href="#home">Home</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
+            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
               <a href="#skill">Skills</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
+            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
               <a href="#project">Projects</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-slate-500 rounded-lg hover:text-slate-600">
+            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
