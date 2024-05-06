@@ -14,7 +14,7 @@ const NavBar = () => {
       <nav className="flex justify-between items-center max-container px-4">
         <div>
           <a href="#home">
-            <img src={logo} alt="logo" className="w-16 h-16" onClick={toggleMenu}/>
+            <img src={logo} alt="logo" className="w-16 h-16"/>
           </a>
         </div>
         <div className="hidden md:block">
