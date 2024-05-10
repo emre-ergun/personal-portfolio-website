@@ -102,8 +102,9 @@ c380 400 643 918 759 1500 145 721 80 1410 -183 1946 -133 270 -289 479 -494
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
-          <p className="my-12 text-sm text-right text-slate-600">
-            Copyright &copy; {new Date().getFullYear()} EngramSoft
+          <p className="mt-12 text-sm text-right text-slate-600">EngramSoft</p>
+          <p className="text-sm text-right text-slate-600">
+            Copyright &copy; {new Date().getFullYear()}
           </p>
         </div>
       )}

@@ -30,22 +30,22 @@
 }
 
 .hamburger-svg-open {
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .hamburger-svg-close {
-  transition: 1s;
+  transition: 0.5s;
   translate: 3px -2px;
   rotate: 0.125turn;
 }
 
 .hamburger-line-open {
-  transition: 1s;
+  transition: 0.5s;
   stroke-dasharray: 60 31 60 300;
 }
 
 .hamburger-line-close {
-  transition: 1s;
+  transition: 0.5s;
   stroke-dasharray: 60 105 60 300;
   stroke-dashoffset: -90;
 }
