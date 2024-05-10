@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { logo } from '../assets';
 import { HamburgerMenu } from '../components';
 
 const NavBar = () => {
@@ -59,16 +58,24 @@ c380 400 643 918 759 1500 145 721 80 1410 -183 1946 -133 270 -289 479 -494
         <div className="hidden md:block">
           <ul className="flex justify-center items-center gap-8 text-xl font-primary font-semibold">
             <li>
-              <a href="#home" className='hover:text-slate-600'>Home</a>
+              <a href="#home" className="hover:text-slate-600">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#skill" className='hover:text-slate-600'>Skills</a>
+              <a href="#skill" className="hover:text-slate-600">
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#project" className='hover:text-slate-600'>Projects</a>
+              <a href="#project" className="hover:text-slate-600">
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#contact" className='hover:text-slate-600'>Contact Me</a>
+              <a href="#contact" className="hover:text-slate-600">
+                Contact Me
+              </a>
             </li>
           </ul>
         </div>
@@ -78,24 +85,24 @@ c380 400 643 918 759 1500 145 721 80 1410 -183 1946 -133 270 -289 479 -494
       </nav>
       {isMenuOpen && (
         <div
-          className="absolute bg-white pt-16 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
+          className="absolute bg-white pt-4 px-4 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
           onClick={toggleMenu}
         >
-          <ul className="flex flex-col justify-center items-center mt-4 px-8 space-y-4 text-xl font-primary font-semibold">
-            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
+          <ul className="flex flex-col justify-center items-center mt-4 space-y-3 text-xl font-primary font-semibold">
+            <li className="w-full text-right hover:text-slate-600">
               <a href="#home">Home</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
+            <li className="w-full text-right hover:text-slate-600">
               <a href="#skill">Skills</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
+            <li className="w-full text-right hover:text-slate-600">
               <a href="#project">Projects</a>
             </li>
-            <li className="p-2 w-full text-center border-2 border-black rounded-lg hover:text-slate-600">
+            <li className="w-full text-right hover:text-slate-600">
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
-          <p className="my-16 text-sm text-center text-slate-500">
+          <p className="my-12 text-sm text-right text-slate-600">
             Copyright &copy; {new Date().getFullYear()} EngramSoft
           </p>
         </div>

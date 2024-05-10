@@ -31,12 +31,11 @@ export default {
       keyframes: {
         'open-menu': {
           '0%': { transform: 'scaleX(0)' },
-          '70%': { transform: 'scaleX(1.1)' },
           '100%': { transform: 'scaleX(1)' },
         },
       },
       animation: {
-        'open-menu': 'open-menu 0.5s ease-in-out forwards',
+        'open-menu': 'open-menu 0.1s linear forwards',
       },
     },
   },
