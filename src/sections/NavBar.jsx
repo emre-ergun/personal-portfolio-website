@@ -157,9 +157,10 @@ const NavBar = () => {
                 },
               }}
               href="#contact"
-              className="px-2 text-right border border-slate-500 bg-slate-500 text-neutral-200 rounded-lg hover:bg-slate-900"
+              className="flex gap-2 items-center justify-center px-2 text-right border border-slate-500 bg-slate-500 text-neutral-200 rounded-lg hover:bg-slate-900"
             >
               Let's Connect
+              <MdEmail />
             </motion.a>
           </div>
           <div className="flex flex-col justify-center items-end">
@@ -175,7 +176,7 @@ const NavBar = () => {
               }}
               className="mt-12 bg-black rounded-lg px-4 text-sm text-right text-slate-400"
             >
-              EngramSoft
+              <a href="https://engramsoft.com" target='_blank' className='underline'>EngramSoft</a>
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: 100 }}

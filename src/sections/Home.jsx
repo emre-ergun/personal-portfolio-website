@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="mt-32 border-b border-neutral-900 pb-4 lg:mb-36 container mx-auto scroll-m-32"
+      className="mt-32 pb-32 border-b border-neutral-900 pb-4 lg:mb-36 container mx-auto scroll-m-32"
     >
       <div className="flex flex-wrap px-4">
         <div className="w-full lg:w-1/2">
@@ -20,7 +20,7 @@ const Home = () => {
                   duration: 0.5,
                 },
               }}
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-8 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
               Emre Ergün
             </motion.h1>
@@ -33,7 +33,7 @@ const Home = () => {
                   duration: 0.5,
                 },
               }}
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="pb-8 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl lg:text-4xl tracking-tight text-transparent"
             >
               Senior Software Developer
             </motion.span>
