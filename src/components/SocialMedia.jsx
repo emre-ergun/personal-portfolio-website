@@ -1,8 +1,19 @@
 import { SlSocialLinkedin, SlSocialGithub } from 'react-icons/sl';
+import { motion } from 'framer-motion';
 
 const SocialMedia = () => {
   return (
-    <div className="fixed flex flex-col gap-4 top-[128px] ml-4 py-2 px-1 rounded-3xl bg-black hover:bg-neutral-200">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      }}
+      className="fixed flex gap-2 top-[64px] ml-2 py-2 px-1 rounded-3xl bg-black hover:bg-neutral-200"
+    >
       <a
         href="https://linkedin.com/in/emrergun"
         target="_blank"
@@ -17,7 +28,7 @@ const SocialMedia = () => {
       >
         <SlSocialGithub />
       </a>
-    </div>
+    </motion.div>
   );
 };
 

@@ -14,11 +14,11 @@ const NavBar = () => {
     setColor(window.scrollY >= 90);
   };
 
-  window.addEventListener('scroll', changeColor)
+  window.addEventListener('scroll', changeColor);
 
   return (
     <header
-      className={`fixed w-full top-0 z-10 ${
+      className={`mb-20 fixed w-full top-0 z-10 ${
         color ? 'bg-black bg-opacity-40 transition-colors duration-1000' : ''
       }`}
     >
@@ -67,7 +67,7 @@ const NavBar = () => {
             </svg>
           </a>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="flex justify-center items-center gap-6 text-xl font-primary font-normal my-[9px]">
             <a href="#home" className="hover:text-slate-400">
               Home
@@ -87,7 +87,7 @@ const NavBar = () => {
           </div>
         </div>
         <div
-          className="rounded-full md:hidden cursor-pointer"
+          className="rounded-full lg:hidden cursor-pointer"
           onClick={toggleMenu}
         >
           <HamburgerMenu isClicked={isMenuOpen} />
@@ -95,7 +95,7 @@ const NavBar = () => {
       </nav>
       {isMenuOpen && (
         <div
-          className="absolute pt-4 px-4 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
+          className="absolute pt-4 px-4 right-0 w-full h-screen origin-right animate-open-menu lg:hidden"
           onClick={toggleMenu}
         >
           <div className="flex flex-col justify-center items-end mt-2 space-y-3 text-xl font-primary font-normal">
@@ -159,34 +159,36 @@ const NavBar = () => {
               Let's Connect
             </motion.a>
           </div>
-          <motion.p
-            initial={{ opacity: 0, x: 100 }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                delay: 0.4,
-              },
-            }}
-            className="mt-12 text-sm text-right text-slate-600"
-          >
-            EngramSoft
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, x: 100 }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                delay: 0.4,
-              },
-            }}
-            className="text-sm text-right text-slate-600"
-          >
-            Copyright &copy; {new Date().getFullYear()}
-          </motion.p>
+          <div className='flex flex-col justify-center items-end'>
+            <motion.p
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.4,
+                },
+              }}
+              className="mt-12 bg-black rounded-lg px-4 text-sm text-right text-slate-400"
+            >
+              EngramSoft
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.4,
+                },
+              }}
+              className="bg-black rounded-lg px-4 text-sm text-right text-slate-400"
+            >
+              Copyright &copy; {new Date().getFullYear()}
+            </motion.p>
+          </div>
         </div>
       )}
     </header>
