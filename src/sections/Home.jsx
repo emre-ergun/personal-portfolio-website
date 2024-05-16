@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -6,7 +8,7 @@ const Home = () => {
       id="home"
       className="mt-32 border-b border-neutral-900 pb-4 lg:mb-36 container mx-auto scroll-m-32"
     >
-      <div className="flex flex-wrap pl-4">
+      <div className="flex flex-wrap px-4">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
@@ -46,17 +48,48 @@ const Home = () => {
               }}
               className="my-2 max-w-xl py-6 font-light tracking-tighter"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              nostrum maiores omnis fugit. Eos deleniti quia non atque
-              praesentium earum illum saepe sint expedita. Accusamus iste nam
-              quisquam quos tempore. Impedit tempore, hic aperiam totam modi
-              ipsum sunt consequuntur deleniti nihil dignissimos ex quidem in
-              fuga vero eaque quam. Consequatur deleniti atque quis fugiat
-              architecto similique vitae iure numquam optio.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+              veritatis id dignissimos consequuntur facilis asperiores maxime
+              nemo, amet totam ut recusandae sequi alias non illo odit ipsa
+              magnam. Vero, ea? Maxime illo quia aliquam ut dolorem. Sit nam
+              distinctio perferendis soluta nulla qui, fuga ea voluptatibus rem
+              error beatae dignissimos magnam reiciendis facilis quasi quis
+              nesciunt labore!
             </motion.p>
+            <div className="flex gap-4">
+              <motion.a
+                initial={{ opacity: 0, x: -100 }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+                className="flex items-center justify-center gap-2 py-2 px-4 font-semibold tracking-wide border border-slate-500  text-neutral-200 rounded-lg hover:bg-slate-500"
+              >
+                Download CV
+                <FaCloudDownloadAlt />
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+                href="#contact"
+                className="flex items-center justify-center gap-2 py-2 px-4 font-semibold tracking-wide border border-slate-500  text-neutral-200 rounded-lg hover:bg-slate-500"
+              >
+                Let's Connect
+                <MdEmail />
+              </motion.a>
+            </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center">
+        <div className="w-full lg:w-1/2 p-8 flex items-center justify-center">
           <div className="flex justify-center items-center">
             <motion.div
               initial={{ opacity: 0, x: 100 }}

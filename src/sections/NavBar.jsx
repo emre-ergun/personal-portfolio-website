@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HamburgerMenu } from '../components';
 import { motion } from 'framer-motion';
+import { MdEmail } from 'react-icons/md';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,13 +25,13 @@ const NavBar = () => {
     >
       <nav className="flex justify-between items-center max-container px-4 py-2">
         <div>
-          <a href="#home">
+          <a href="#home" className="flex items-center justify-center gap-3">
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 564.000000 502.000000"
               preserveAspectRatio="xMidYMid meet"
-              className="fill-neutral-200 h-10 hover:fill-neutral-500"
+              className="fill-neutral-200 h-10"
             >
               <g
                 transform="translate(0.000000,502.000000) scale(0.100000,-0.100000)"
@@ -65,6 +66,7 @@ const NavBar = () => {
                 />
               </g>
             </svg>
+            <span className="text-3xl font-normal tracking-widest">Emre</span>
           </a>
         </div>
         <div className="hidden lg:block">
@@ -80,9 +82,10 @@ const NavBar = () => {
             </a>
             <a
               href="#contact"
-              className="px-2 border border-slate-500  text-neutral-200 rounded-lg hover:bg-slate-500"
+              className="flex gap-2 items-center justify-center py-1 px-2 border border-slate-500  text-neutral-200 rounded-lg hover:bg-slate-500"
             >
               Let's Connect
+              <MdEmail />
             </a>
           </div>
         </div>
@@ -159,7 +162,7 @@ const NavBar = () => {
               Let's Connect
             </motion.a>
           </div>
-          <div className='flex flex-col justify-center items-end'>
+          <div className="flex flex-col justify-center items-end">
             <motion.p
               initial={{ opacity: 0, x: 100 }}
               animate={{
