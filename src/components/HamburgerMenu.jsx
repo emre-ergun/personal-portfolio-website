@@ -1,14 +1,14 @@
 const HamburgerMenu = ({isClicked}) => {
   return (
     <button
-      className="hamburger-button border-2 border-button-primary rounded-lg mt-2"
+      className="hamburger-button border-2 border-neutral-200 rounded-lg mt-2"
       aria-controls="primary-navigation"
       aria-expanded="false"
     >
       <svg
         viewBox="-10 -10 120 120"
-        width="45"
-        className={`fill-none stroke-button-primary ${isClicked ? 'hamburger-svg-close' : 'hamburger-svg-open'}`}
+        width="32"
+        className={`fill-none stroke-neutral-200 ${isClicked ? 'hamburger-svg-close' : 'hamburger-svg-open'}`}
       >
         <path
           className={`${isClicked ? 'hamburger-line-close' : 'hamburger-line-open'}`}

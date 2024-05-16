@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex justify-center items-center max-container section-min-height scroll-m-16"
+      className="flex justify-center items-center max-container section-min-height"
     >
       Contact
     </section>

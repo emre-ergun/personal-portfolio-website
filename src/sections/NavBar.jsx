@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
 import { HamburgerMenu } from '../components';
+import { motion } from 'framer-motion';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [color, setColor] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(open => !open);
   };
 
+  const changeColor = () => {
+    setColor(window.scrollY >= 90);
+  };
+
+  window.addEventListener('scroll', changeColor)
+
   return (
-    <header className="sticky top-0 z-10 bg-white shadow-lg">
-      <nav className="flex justify-between items-center max-container px-4">
+    <header
+      className={`fixed w-full top-0 z-10 ${
+        color ? 'bg-black bg-opacity-40 transition-colors duration-1000' : ''
+      }`}
+    >
+      <nav className="flex justify-between items-center max-container px-4 py-2">
         <div>
           <a href="#home">
             <svg
@@ -18,7 +30,7 @@ const NavBar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 564.000000 502.000000"
               preserveAspectRatio="xMidYMid meet"
-              className="fill-black w-16 h-16 hover:fill-slate-600"
+              className="fill-neutral-200 h-10 hover:fill-neutral-500"
             >
               <g
                 transform="translate(0.000000,502.000000) scale(0.100000,-0.100000)"
@@ -56,56 +68,125 @@ const NavBar = () => {
           </a>
         </div>
         <div className="hidden md:block">
-          <ul className="flex justify-center items-center gap-8 text-xl font-primary font-semibold">
-            <li>
-              <a href="#home" className="hover:text-slate-600">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#skill" className="hover:text-slate-600">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#project" className="hover:text-slate-600">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-slate-600">
-                Contact Me
-              </a>
-            </li>
-          </ul>
+          <div className="flex justify-center items-center gap-6 text-xl font-primary font-normal my-[9px]">
+            <a href="#home" className="hover:text-slate-400">
+              Home
+            </a>
+            <a href="#skill" className="hover:text-slate-400">
+              Skills
+            </a>
+            <a href="#project" className="hover:text-slate-400">
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="px-2 border border-slate-500  text-neutral-200 rounded-lg hover:bg-slate-500"
+            >
+              Let's Connect
+            </a>
+          </div>
         </div>
-        <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
+        <div
+          className="rounded-full md:hidden cursor-pointer"
+          onClick={toggleMenu}
+        >
           <HamburgerMenu isClicked={isMenuOpen} />
         </div>
       </nav>
       {isMenuOpen && (
         <div
-          className="absolute bg-white pt-4 px-4 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
+          className="absolute pt-4 px-4 right-0 w-full h-screen origin-right animate-open-menu md:hidden"
           onClick={toggleMenu}
         >
-          <ul className="flex flex-col justify-center items-center mt-4 space-y-3 text-xl font-primary font-semibold">
-            <li className="w-full text-right hover:text-slate-600">
-              <a href="#home">Home</a>
-            </li>
-            <li className="w-full text-right hover:text-slate-600">
-              <a href="#skill">Skills</a>
-            </li>
-            <li className="w-full text-right hover:text-slate-600">
-              <a href="#project">Projects</a>
-            </li>
-            <li className="w-full text-right hover:text-slate-600">
-              <a href="#contact">Contact Me</a>
-            </li>
-          </ul>
-          <p className="mt-12 text-sm text-right text-slate-600">EngramSoft</p>
-          <p className="text-sm text-right text-slate-600">
+          <div className="flex flex-col justify-center items-end mt-2 space-y-3 text-xl font-primary font-normal">
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              href="#home"
+              className="bg-black rounded-lg px-4 text-right hover:text-slate-400"
+            >
+              Home
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.1,
+                },
+              }}
+              href="#skill"
+              className="bg-black rounded-lg px-4 text-right hover:text-slate-400"
+            >
+              Skills
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.2,
+                },
+              }}
+              href="#project"
+              className="bg-black rounded-lg px-4 text-right hover:text-slate-400"
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.3,
+                },
+              }}
+              href="#contact"
+              className="px-2 text-right border border-slate-500 bg-slate-500 text-neutral-200 rounded-lg hover:bg-slate-900"
+            >
+              Let's Connect
+            </motion.a>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, x: 100 }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0.4,
+              },
+            }}
+            className="mt-12 text-sm text-right text-slate-600"
+          >
+            EngramSoft
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, x: 100 }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0.4,
+              },
+            }}
+            className="text-sm text-right text-slate-600"
+          >
             Copyright &copy; {new Date().getFullYear()}
-          </p>
+          </motion.p>
         </div>
       )}
     </header>

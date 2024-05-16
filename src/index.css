@@ -8,7 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overscroll-behavior: none;
 }
 
 @layer components {
@@ -20,7 +19,7 @@
 
 @layer utilities {
   .section-min-height {
-    min-height: calc(100vh - 64px);
+    min-height: calc(100vh);
   }
 }
 
@@ -35,7 +34,7 @@
 
 .hamburger-svg-close {
   transition: 0.5s;
-  translate: 3px -2px;
+  translate: 2px -2px;
   rotate: 0.125turn;
 }
 
