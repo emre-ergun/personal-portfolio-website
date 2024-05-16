@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
-import { MdEmail } from "react-icons/md";
+import { MdEmail } from 'react-icons/md';
+import { profilePicture } from '../assets';
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
               }}
               className="pb-8 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl lg:text-4xl tracking-tight text-transparent"
             >
-              Senior Software Developer
+              Senior Software Engineer
             </motion.span>
             <motion.p
               initial={{ opacity: 0, x: -100 }}
@@ -46,7 +47,7 @@ const Home = () => {
                   duration: 0.5,
                 },
               }}
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-1 max-w-xl py-4 font-light tracking-tighter"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
               veritatis id dignissimos consequuntur facilis asperiores maxime
@@ -92,16 +93,29 @@ const Home = () => {
         <div className="w-full lg:w-1/2 p-8 flex items-center justify-center">
           <div className="flex justify-center items-center">
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{
-                x: 0,
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                },
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 260,
+                damping: 20,
               }}
-              className="w-80 h-80 rounded-full bg-gradient-to-r from-pink-300  to-purple-500"
-            ></motion.div>
+              className="relative w-[400px] h-[400px] rounded-full bg-gradient-to-r from-pink-300  to-purple-500 overflow-clip"
+            >
+              <motion.img
+                initial={{ scale: 0 }}
+                animate={{ rotate: 360, scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 256,
+                  damping: 20,
+                  delay: 0.2,
+                }}
+                src={profilePicture}
+                alt="Emre Ergün"
+                className="hover:object-bottom"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
