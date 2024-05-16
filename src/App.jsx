@@ -1,3 +1,4 @@
+import SocialMedia from './components/SocialMedia';
 import { Home, Skill, Project, Contact, Footer, NavBar } from './sections';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Project />
         <Contact />
         <Footer />
+        <SocialMedia />
       </div>
     </div>
   );
