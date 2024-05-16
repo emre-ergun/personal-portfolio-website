@@ -100,7 +100,7 @@ const Home = () => {
                 stiffness: 260,
                 damping: 20,
               }}
-              className="relative w-[400px] h-[400px] rounded-full bg-gradient-to-r from-pink-300  to-purple-500 overflow-clip"
+              className="relative w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] rounded-full bg-gradient-to-r from-pink-300  to-purple-500 overflow-clip"
             >
               <motion.img
                 initial={{ scale: 0 }}
@@ -113,7 +113,6 @@ const Home = () => {
                 }}
                 src={profilePicture}
                 alt="Emre Ergün"
-                className="hover:object-bottom"
               />
             </motion.div>
           </div>
