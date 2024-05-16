@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="mt-32 pb-32 border-b border-neutral-900 pb-4 lg:mb-36 container mx-auto scroll-m-32"
+      className="mt-32 pb-32 border-b border-neutral-900 lg:mb-36 container mx-auto scroll-m-32"
     >
       <div className="flex flex-wrap px-4">
         <div className="w-full lg:w-1/2">
