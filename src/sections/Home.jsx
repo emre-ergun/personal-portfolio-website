@@ -102,7 +102,7 @@ const Home = () => {
               }}
               className="relative w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] rounded-full bg-gradient-to-r from-pink-300  to-purple-500 overflow-clip"
             >
-              <motion.img
+              {/* <motion.img
                 initial={{ scale: 0 }}
                 animate={{ rotate: 360, scale: 1 }}
                 transition={{
@@ -113,7 +113,7 @@ const Home = () => {
                 }}
                 src={profilePicture}
                 alt="Emre Ergün"
-              />
+              /> */}
             </motion.div>
           </div>
         </div>
