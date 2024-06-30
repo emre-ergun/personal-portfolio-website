@@ -12,7 +12,7 @@ const NavBar = ({ isTopOfPage }: NavBarProp) => {
   const navBarBackground = isTopOfPage ? '' : 'bg-primary-100 drop-shadow';
   return (
     <div className={`${navBarBackground} fixed top-0 z-30 w-full py-4`}>
-      <div className="flex items-end justify-between mx-auto  px-4 xl:px-0 max-w-screen-xl">
+      <div className="flex items-end justify-between mx-auto px-4 xl:px-0 max-w-screen-xl">
         <div className="flex items-end w-3/12">
           {/* <svg
             version="1.0"
@@ -54,8 +54,8 @@ const NavBar = ({ isTopOfPage }: NavBarProp) => {
               />
             </g>
           </svg> */}
-          <img src={logo} alt="logo" className='h-12'/>
-          <h1 className="text-3xl font-extrabold leading-none align-text-bottom">
+          <img src={logo} alt="logo" className='h-10 md:h-12'/>
+          <h1 className="text-2xl md:text-3xl font-extrabold leading-none align-text-bottom">
             .Emre
           </h1>
         </div>
@@ -69,7 +69,7 @@ const NavBar = ({ isTopOfPage }: NavBarProp) => {
         <div className="hidden lg:block w-3/12">
           <div className="flex items-center justify-end">
             <AnchorLink
-              className="w-max-fit rounded-md bg-secondary-500 cursor-pointer px-8 py-2 hover:bg-primary-500 hover:text-white"
+              className="w-max-fit rounded-md bg-secondary-500 cursor-pointer px-8 py-2 hover:bg-primary-500 hover:text-white font-medium"
               href="#contact"
             >
               Let&apos;s Contact
