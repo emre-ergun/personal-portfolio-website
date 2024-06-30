@@ -1,5 +1,6 @@
 import { SelectedPage } from '@/shared/types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { logo } from '@/assets';
 
 type NavBarProp = {
   isTopOfPage: boolean;
@@ -11,14 +12,14 @@ const NavBar = ({ isTopOfPage }: NavBarProp) => {
   const navBarBackground = isTopOfPage ? '' : 'bg-primary-100 drop-shadow';
   return (
     <div className={`${navBarBackground} fixed top-0 z-30 w-full py-4`}>
-      <div className="flex items-end justify-between mx-auto px-4 md:px-0 md:w-5/6 lg:w-3/5">
-        <div className='flex items-end'>
-          <svg
+      <div className="flex items-end justify-between mx-auto  px-4 xl:px-0 max-w-screen-xl">
+        <div className="flex items-end w-3/12">
+          {/* <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 564.000000 502.000000"
             preserveAspectRatio="xMidYMid meet"
-            className="h-10"
+            className="h-12 "
           >
             <g
               transform="translate(0.000000,502.000000) scale(0.100000,-0.100000)"
@@ -52,23 +53,28 @@ const NavBar = ({ isTopOfPage }: NavBarProp) => {
                   866 151z"
               />
             </g>
-          </svg>
-          <h1 className='text-3xl font-extrabold leading-none align-text-bottom'>.Emre</h1>
+          </svg> */}
+          <img src={logo} alt="logo" className='h-12'/>
+          <h1 className="text-3xl font-extrabold leading-none align-text-bottom">
+            .Emre
+          </h1>
         </div>
-        <div className="hidden lg:block">
-          <div className="flex gap-4 items-center justify-center">
+        <div className="hidden lg:block w-6/12">
+          <div className="flex items-center justify-center gap-16 text-xl font-medium">
             <AnchorLink href="#hero">Home</AnchorLink>
             <AnchorLink href="#skills">Skills</AnchorLink>
             <AnchorLink href="#projects">Projects</AnchorLink>
           </div>
         </div>
-        <div className="hidden lg:block">
-          <AnchorLink
-            className="rounded-md bg-secondary-500 cursor-pointer px-10 py-2 hover:bg-primary-500 hover:text-white"
-            href="#contact"
-          >
-            Let&apos;s Contact
-          </AnchorLink>
+        <div className="hidden lg:block w-3/12">
+          <div className="flex items-center justify-end">
+            <AnchorLink
+              className="w-max-fit rounded-md bg-secondary-500 cursor-pointer px-8 py-2 hover:bg-primary-500 hover:text-white"
+              href="#contact"
+            >
+              Let&apos;s Contact
+            </AnchorLink>
+          </div>
         </div>
       </div>
     </div>
