@@ -1,6 +1,4 @@
-type Props = {};
-
-const NavBar = (props: Props) => {
+const NavBar = () => {
   return <div>NavBar</div>;
 };
 
