@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div className='font-primary'>
+      <div className='app'>
         <NavBar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
